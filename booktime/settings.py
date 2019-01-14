@@ -76,10 +76,23 @@ WSGI_APPLICATION = 'booktime.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'booktime',
+        'USER': 'tom',
+        'PASSWORD': 'tom',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
+
+
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
 
 
 # Password validation
@@ -110,11 +123,6 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = False
 
-#TIME_ZONE = 'UTC'
-#USE_I18N = True
-#USE_L10N = True
-#USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -122,3 +130,5 @@ USE_TZ = False
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+print ("BASE_DIR: {0}\n Media root: {1}\n Static URL: {2}\n".format(BASE_DIR, MEDIA_ROOT, STATIC_URL))
