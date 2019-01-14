@@ -1,5 +1,5 @@
-Pratical Django 2 and  Channels 2
-1/13, sunday
+Practical Django 2 and  Channels 2
+1/13, Sunday
 
 pg26   
 
