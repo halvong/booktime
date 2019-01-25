@@ -1,7 +1,7 @@
-Practical Django 2 and Channels 2
-1/13, Sunday
+Practical Django 2 and Channels 2, Apress PDF
+1/25, Fri
 
-pg26   
+pg38   
 
 #path
 cd /home/hal/Documents/softwares/pycharm/workspace/booktime; source ~/venv3.6/bin/activate
