@@ -11,3 +11,4 @@ sudo su postgres
 psql -d booktime
 
 sudo systemctl start postgresql
+docker-compose exec database psql -U postgres -h database
