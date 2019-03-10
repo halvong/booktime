@@ -17,19 +17,25 @@ docker-compose exec database psql -U postgres -h database
 docker-compose exec web python manage.py migrate
 docker-compose up
 docker-compose exec web python manage.py test -v 2
+docker-compose exec web python manage.py shell
+docker-compose up -d --force-recreate web
+
 #logs
     docker-compose logs redis
     
-    docker-compose up logs -f database
-    docker-compose up logs -f web
+    docker-compose logs -f database
+    docker-compose logs -f web
+
+exec(open('script.py').read())
+#links
+https://django-environ.readthedocs.io/en/latest/
 
 
-
-
-
-
-
-
+#not used
+#env = environ.Env(DEBUG=(bool, False),)
+#open('.env/dev', 'a').write('DEBUG=on')
+#environ.Env.read_env('.env/dev')
+#env('DEBUG')
 
 
 
